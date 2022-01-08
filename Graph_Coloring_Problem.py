@@ -62,7 +62,7 @@ for o in order:
     sol.append(nodes[o].color)
 output_data = str(chromatic_number) + '\n'
 output_data += ' '.join(map(str, solution))
-print(output_data)
+print(output_data)                              #First line shows the chromatic number of the graph and the second line the number attributed to a color which is assigned to each node
 
 
 
