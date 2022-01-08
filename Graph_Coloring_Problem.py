@@ -1,5 +1,5 @@
 
-f = open("C:\\Users\MrNobody\Desktop\Discrete Optimization\HW3-coloring\data\gc_50_3","r")
+f = open("C:\\Users\data_file","r")
 input_data = ''.join(f.readlines())
 
 lines = input_data.split('\n')
