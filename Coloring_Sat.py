@@ -43,13 +43,13 @@ for i in range(node_count):
 #main loop
 order=sorted(range(len(deg)), key=lambda k: deg[k], reverse=True)     # order based on the degree of the nodes
 solution=[-1]*node_count
-sat=[0]*node_count
+sat=[0]*node_count                                                  # the saturation degree of the nodes
 while -1 in solution:
     if sum(solution)==-node_count:
         i=order[0]
     else:
         tp=[]
-        ordsat=sorted(range(len(sat)), key=lambda k: sat[k], reverse=True)
+        ordsat=sorted(range(len(sat)), key=lambda k: sat[k], reverse=True)     #the order (descending order) of the nodes based their saturation degree
         grbg=[]
         for j in ordsat:
             if solution[j]!=-1:
