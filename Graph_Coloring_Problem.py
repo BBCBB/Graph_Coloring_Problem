@@ -13,10 +13,6 @@ for i in range(1, edge_count + 1):
     parts = line.split()
     edges.append((int(parts[0]), int(parts[1])))
 
-# build a trivial solution
-# every node has its own color
-
-# solution = range(0, node_count)
 class node:
     def __init__(self,degree,color,neighbors):
         self.degree=degree
