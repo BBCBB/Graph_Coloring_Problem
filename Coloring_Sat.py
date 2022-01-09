@@ -1,5 +1,5 @@
 
-f = open("C:\\Users\data\gc_1000_5","r")
+f = open("C:\\Users\data\data_file","r")
 input_data = ''.join(f.readlines())
 
 lines = input_data.split('\n')
