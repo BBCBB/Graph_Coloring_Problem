@@ -13,7 +13,7 @@ for i in range(1, edge_count + 1):
     parts = line.split()
     edges.append((int(parts[0]), int(parts[1])))
 
-ub=6
+ub=6                                                         #You define an upper bound larger than which the algorithm would backtrack trying to improve the solution
 class node:
     def __init__(self,degree,color,neighbors,satdeg):
         self.degree=degree
@@ -43,9 +43,9 @@ for i in range(node_count):
 #main loop
 order=sorted(range(len(deg)), key=lambda k: deg[k], reverse=True)     # order based on the degree of the nodes
 solution=[-1]*node_count
-sat=[0]*node_count
+sat=[0]*node_count                                                    # "sat" is the basis of the node selection in each iteration (it is based on the saturation degree and the upper bound)
 while -1 in solution:
-    if sum(solution)==-node_count:
+    if sum(solution)==-node_count:                                    # from line 48 to line 75 the algorithm tries to choose a new node based of 1: Saturation degree 2: degree
         i=order[0]
     else:
         tp=[]
